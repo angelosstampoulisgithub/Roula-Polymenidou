@@ -31,13 +31,41 @@ struct SwiftUIResume: View {
                 Text("Μy Resume").font(.title).foregroundColor(Color(.sRGB, red: 0/255, green:128/255,blue: 128/255, opacity: 1))
                 Image("user").resizable().frame(width: 150.0, height: 150.0, alignment: .center)
                     .cornerRadius(84.0)
-                ScrollView{
-                    Text(message).frame(width: 400.0, height: 600.0, alignment: .top)
-                        .foregroundColor(.white)
-                }.frame(width:UIScreen.main.bounds.width, height: 360, alignment: .top)
+                TypewriterText(text: message, speed: 0.02)
+                                   .foregroundColor(.white)
+                                   .frame(width: 350, alignment: .topLeading)
                 
             }.frame(width:UIScreen.main.bounds.width, height:UIScreen.main.bounds.height - 30, alignment: .top)
                 .background(Color(.sRGB, red: 32/255, green: 55/255, blue: 72/255, opacity: 1.0))
+        }
+    }
+}
+
+struct TypewriterText: View {
+    let text: String
+    let speed: Double
+    
+    @State private var displayedText = ""
+    @State private var index = 0
+    
+    var body: some View {
+        Text(displayedText)
+            .onAppear {
+                displayedText = ""
+                index = 0
+                typeNextCharacter()
+            }
+    }
+    
+    private func typeNextCharacter() {
+        guard index < text.count else { return }
+        
+        let characters = Array(text)
+        displayedText.append(characters[index])
+        index += 1
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + speed) {
+            typeNextCharacter()
         }
     }
 }

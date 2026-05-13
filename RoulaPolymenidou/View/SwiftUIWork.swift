@@ -20,7 +20,21 @@ struct SwiftUIWork: View {
                         Text(subtitle).font(.title).foregroundColor(.white)
                         Image("user").resizable().frame(width: 120.0, height: 120.0, alignment: .center)
                             .cornerRadius(54.0)
-                        Text("Μy Work").font(.title).foregroundColor(Color(.sRGB, red: 0/255, green:128/255,blue: 128/255, opacity: 1))
+                        NavigationLink {
+                            GeometryReader{ reader in
+                                VStack{
+                                    Color.black.overlay {
+                                        PageCurl()
+                                    }
+                                }
+                                .frame(width:reader.size.width,height: reader.size.height)
+                                .navigationTitle("Album")
+                                .navigationBarTitleDisplayMode(.inline)
+                            }
+                        } label: {
+                            Text("Album")
+                        }
+                       
                     }.frame(width: 360, height: 180, alignment: .center)
                     Spacer(minLength: 30)
                 }
@@ -31,22 +45,28 @@ struct SwiftUIWork: View {
                     } label: {
                         Image("1-thumb").frame(width: 180, height: 180, alignment: .center)
                     }
+                   
                     NavigationLink {
                         ImageDetailsView(imageName: "2-thumb")
                     } label: {
                         Image("2-thumb").frame(width: 180, height: 180, alignment: .center)
                     }
+                  
                     NavigationLink {
                         ImageDetailsView(imageName: "3-thumb")
                     } label: {
                         Image("3-thumb").frame(width: 180, height: 180, alignment: .center)
                     }
+                    
                     NavigationLink {
                         ImageDetailsView(imageName: "4-thumb")
                     } label: {
                         Image("4-thumb").frame(width: 180, height: 180, alignment: .center)
                     }
+                   
                 }.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height-120, alignment: .bottom)
+             
+
                 
             }.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .topLeading)
                 .background(Color(.sRGB, red: 32/255, green: 55/255, blue: 72/255, opacity: 1.0))
