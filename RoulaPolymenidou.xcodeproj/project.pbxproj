@@ -23,10 +23,10 @@
 		D6435CBF2FB5240E00432C6F /* PageCurl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6435CBB2FB5240E00432C6F /* PageCurl.swift */; };
 		D6435CC02FB5240E00432C6F /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6435CBC2FB5240E00432C6F /* PageViewController.swift */; };
 		D6435CC12FB5240E00432C6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6435CBD2FB5240E00432C6F /* ViewController.swift */; };
-		D685CD472E60957500DE0738 /* Photoshop.swift in Sources */ = {isa = PBXBuildFile; fileRef = D685CD462E60957500DE0738 /* Photoshop.swift */; };
-		D685CD492E6099F800DE0738 /* Illustrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D685CD482E6099F800DE0738 /* Illustrator.swift */; };
-		D685CD4B2E609F0500DE0738 /* Html5.swift in Sources */ = {isa = PBXBuildFile; fileRef = D685CD4A2E609F0500DE0738 /* Html5.swift */; };
-		D6B5E7622E60FEDF0084BF73 /* CSS3.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B5E7612E60FEDF0084BF73 /* CSS3.swift */; };
+		D68BB1E02FB7CB5500DFAE2E /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68BB1DF2FB7CB5500DFAE2E /* Skill.swift */; };
+		D68BB1E22FB7CB7100DFAE2E /* Shimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68BB1E12FB7CB7100DFAE2E /* Shimmer.swift */; };
+		D68BB1E42FB7CB9700DFAE2E /* SkillBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68BB1E32FB7CB9700DFAE2E /* SkillBar.swift */; };
+		D68BB1E62FB7CBBC00DFAE2E /* GlassCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68BB1E52FB7CBBC00DFAE2E /* GlassCard.swift */; };
 		D6E2FDDD2E633C4000F764AC /* ImageDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E2FDDC2E633C4000F764AC /* ImageDetailsView.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,10 +67,10 @@
 		D6435CBB2FB5240E00432C6F /* PageCurl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageCurl.swift; sourceTree = "<group>"; };
 		D6435CBC2FB5240E00432C6F /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		D6435CBD2FB5240E00432C6F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D685CD462E60957500DE0738 /* Photoshop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photoshop.swift; sourceTree = "<group>"; };
-		D685CD482E6099F800DE0738 /* Illustrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Illustrator.swift; sourceTree = "<group>"; };
-		D685CD4A2E609F0500DE0738 /* Html5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Html5.swift; sourceTree = "<group>"; };
-		D6B5E7612E60FEDF0084BF73 /* CSS3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSS3.swift; sourceTree = "<group>"; };
+		D68BB1DF2FB7CB5500DFAE2E /* Skill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
+		D68BB1E12FB7CB7100DFAE2E /* Shimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shimmer.swift; sourceTree = "<group>"; };
+		D68BB1E32FB7CB9700DFAE2E /* SkillBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillBar.swift; sourceTree = "<group>"; };
+		D68BB1E52FB7CBBC00DFAE2E /* GlassCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassCard.swift; sourceTree = "<group>"; };
 		D6E2FDDC2E633C4000F764AC /* ImageDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +122,7 @@
 		D62FFE2D2A5FF61700390B5D /* RoulaPolymenidou */ = {
 			isa = PBXGroup;
 			children = (
+				D68BB1DE2FB7CB4400DFAE2E /* Model */,
 				D6435CB92FB5240E00432C6F /* AlbumFlip */,
 				D62FFE602A603A6C00390B5D /* View */,
 				D62FFE2E2A5FF61700390B5D /* RoulaPolymenidouApp.swift */,
@@ -166,10 +167,9 @@
 				D62FFE302A5FF61700390B5D /* ContentView.swift */,
 				D62FFE5A2A60156700390B5D /* SwiftUIProfile.swift */,
 				D63A59DF2E6046F20003E477 /* LaunchScreen.storyboard */,
-				D685CD462E60957500DE0738 /* Photoshop.swift */,
-				D685CD482E6099F800DE0738 /* Illustrator.swift */,
-				D685CD4A2E609F0500DE0738 /* Html5.swift */,
-				D6B5E7612E60FEDF0084BF73 /* CSS3.swift */,
+				D68BB1E12FB7CB7100DFAE2E /* Shimmer.swift */,
+				D68BB1E32FB7CB9700DFAE2E /* SkillBar.swift */,
+				D68BB1E52FB7CBBC00DFAE2E /* GlassCard.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -183,6 +183,14 @@
 				D6435CBD2FB5240E00432C6F /* ViewController.swift */,
 			);
 			path = AlbumFlip;
+			sourceTree = "<group>";
+		};
+		D68BB1DE2FB7CB4400DFAE2E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D68BB1DF2FB7CB5500DFAE2E /* Skill.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,16 +327,16 @@
 				D6435CC12FB5240E00432C6F /* ViewController.swift in Sources */,
 				D62FFE312A5FF61700390B5D /* ContentView.swift in Sources */,
 				D6435CC02FB5240E00432C6F /* PageViewController.swift in Sources */,
-				D685CD492E6099F800DE0738 /* Illustrator.swift in Sources */,
 				D6E2FDDD2E633C4000F764AC /* ImageDetailsView.swift in Sources */,
-				D685CD4B2E609F0500DE0738 /* Html5.swift in Sources */,
 				D6435CBE2FB5240E00432C6F /* Gallery.swift in Sources */,
-				D6B5E7622E60FEDF0084BF73 /* CSS3.swift in Sources */,
+				D68BB1E42FB7CB9700DFAE2E /* SkillBar.swift in Sources */,
+				D68BB1E62FB7CBBC00DFAE2E /* GlassCard.swift in Sources */,
 				D62FFE5F2A60231300390B5D /* SwiftUISkills.swift in Sources */,
 				D6435CBF2FB5240E00432C6F /* PageCurl.swift in Sources */,
+				D68BB1E22FB7CB7100DFAE2E /* Shimmer.swift in Sources */,
 				D62FFE2F2A5FF61700390B5D /* RoulaPolymenidouApp.swift in Sources */,
-				D685CD472E60957500DE0738 /* Photoshop.swift in Sources */,
 				D62FFE592A60130B00390B5D /* SwiftUIResume.swift in Sources */,
+				D68BB1E02FB7CB5500DFAE2E /* Skill.swift in Sources */,
 				D62FFE5D2A60194A00390B5D /* SwiftUIWork.swift in Sources */,
 				D62FFE5B2A60156700390B5D /* SwiftUIProfile.swift in Sources */,
 			);

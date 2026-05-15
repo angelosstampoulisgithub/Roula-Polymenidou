@@ -8,36 +8,65 @@
 import SwiftUI
 
 struct SwiftUISkills: View {
-    var title = "Roula Polymenidou"
-    var subtitle = "Web & Graphics Designer"
-    var photoshop = Path()
-    var body: some View {
-        ScrollView{
-            VStack{
-                VStack{
-                    Text(title).font(.title).foregroundColor(Color(.sRGB, red: 0/255, green:128/255,blue: 128/255, opacity: 1))
-                    Text(subtitle).font(.title).foregroundColor(.white)
-                    Image("user").resizable().frame(width: 120.0, height: 120.0, alignment: .center)
-                        .cornerRadius(54.0)
-                    Text("Μy Skills").font(.title).foregroundColor(Color(.sRGB, red: 0/255, green:128/255,blue: 128/255, opacity: 1))
-                }.frame(width: 360, height: 100, alignment: .top)
-                VStack{
-                    Photoshop()
-                }.frame(height:335)
-                VStack{
-                    Illustrator()
-                }.frame(height:165)
-                VStack{
-                    Html5()
-                }.frame(height:205)
-                VStack{
-                    CSS3()
-                }.frame(height:270)
+    let skills: [Skill] = [
+           Skill(name: "Photoshop", level: 0.95, color: .blue),
+           Skill(name: "Illustrator", level: 0.85, color: .orange),
+           Skill(name: "HTML5", level: 0.90, color: .red),
+           Skill(name: "CSS3", level: 0.80, color: .purple)
+       ]
 
-            }.frame(width:UIScreen.main.bounds.width, height:UIScreen.main.bounds.height + 220, alignment: .top)
-                .background(Color(.sRGB, red: 32/255, green: 55/255, blue: 72/255, opacity: 1.0))
-        }
-    }
+       var body: some View {
+           ScrollView {
+               VStack(spacing: 30) {
+
+                   // Header
+                   VStack(spacing: 10) {
+                       Text("Roula Polymenidou")
+                           .font(.largeTitle.bold())
+                           .foregroundColor(.teal)
+
+                       Text("Web & Graphics Designer")
+                           .font(.title3)
+                           .foregroundColor(.white.opacity(0.9))
+
+                       Image("user")
+                           .resizable()
+                           .scaledToFill()
+                           .frame(width: 130, height: 130)
+                           .clipShape(Circle())
+                           .shadow(radius: 10)
+
+                       Text("My Skills")
+                           .font(.title.bold())
+                           .foregroundColor(.teal)
+                           .padding(.top, 10)
+                   }
+                   .padding(.top, 40)
+
+                   // Skills Cards
+                   ForEach(skills) { skill in
+                       GlassCard {
+                           SkillBar(skill: skill)
+                       }
+                   }
+
+                   Spacer(minLength: 40)
+               }
+               .padding(.bottom, 60)
+           }
+           .background(
+               LinearGradient(
+                   colors: [
+                       Color(red: 32/255, green: 55/255, blue: 72/255),
+                       Color(red: 10/255, green: 20/255, blue: 30/255)
+                   ],
+                   startPoint: .top,
+                   endPoint: .bottom
+               )
+               .ignoresSafeArea()
+           )
+       }
+    
 }
 
 struct SwiftUISkills_Previews: PreviewProvider {
